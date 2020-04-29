@@ -56,14 +56,17 @@
 | DNS 2         | 1.1.1.1          | nslookup uek.krakow.pl   |
 
 ### Schemat sieci
+![my network](siecdomowa.png)
 
-aby załączyć obrazek 
+## Sieć domowa - PC
 
-```markdown
-![alt schemat](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png)![alt schemat](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png)
+| Parametr | wartość           |
+| ------------- |:-------------:|
+| Adres IP      | 192.168.12.153|
+| Maska podsieci| 255.255.255.0 |
+| Brama         | 192.168.12.1  |
+| DNS 1         | 192.168.12.1  |
 
-![alt schemat](images/my-network-schema.png)
-```
-
-![my network](network.png)
+## Dlaczego umiejętności z zakresu sieci komputerowych mogą mi się przydać?
+Rosnąca popularność IoT na pewno skłoni mnie do większej uwagi na ten przedmiot. Ponadto umiejętności te są kluczowe dla większości systemów opartych na Linuxie, więc uważam, że bez nich się nie obejdzie. :)
 
