@@ -28,13 +28,26 @@ Wejściowe parametry sieci
 
 Weryfikacja połączenia
 
-Polecenie
+Polecenie - PC 1
 ```
+ping 10.0.15.6
 ```
 
-Efekt
+Efekt - PC 1
 ```
+Nawiązano połączenie pomiędzy maszynami
 ```
+
+Polecenie - PC 2
+```
+ping 10.0.15.4
+```
+
+Efekt - PC 2
+```
+Nawiązano połączenie pomiędzy maszynami
+```
+
 
 Statyczna konfiguracja parametrów połączenia
 Wejściowe parametry sieci
@@ -42,52 +55,87 @@ Wejściowe parametry sieci
 | Parametr | wartość | komentarz(opcionalny) |
 | ------------- |:-------------:| -----:|
 |   PC 1 |  
-| IP - address  | 192.168.10.10 | |
+| IP - address  | 192.168.10.10 | ip addr add 192.168.10.10/24 dev eth0 |
 | MASKA  | 255.255.255.0 | |
 |   |  | |
 | PC 2  |  | |
-| IP - address  | 192.168.10.11 | |
+| IP - address  | 192.168.10.11 | ip addr add 192.168.10.11/23 dev eth0 |
 | MASKA  | 255.255.128.0 | |
 | PC 2  |  | |
-| IP - address  | 172.16.100.100 | |
+| IP - address  | 172.16.100.100 | ip addr add 172.16.100.100/16 dev eth0 |
 | MASKA  | 255.255.0.0 | |
 
 Weryfikacja połączenia
 
-Polecenie
+Polecenie - PC 1
 ```
-```
-
-Efekt
-```
+ping 192.168.10.11
 ```
 
-Nowa statyczna konfiguracja 
+Efekt - PC 1
+```
+Nawiązano połączenie pomiędzy maszynami
+```
+
+Polecenie - PC 2
+```
+ping 192.168.10.10
+```
+
+Efekt - PC 2
+```
+Nawiązano połączenie pomiędzy maszynami
+```
+
+Polecenie - PC 2
+```
+ping 172.16.100.100
+```
+
+Efekt - PC 2
+```
+Brak połączenia pomiędzy maszynami
+```
+
+## Nowa statyczna konfiguracja 
 
 -------------------------
 | Parametr | wartość | komentarz(opcionalny) |
 | ------------- |:-------------:| -----:|
 |   PC 1 |  
-| IP - address  |  | |
-| MASKA  |  | |
+| IP - address  | 192.168.56.120 | ip addr add 192.168.8.120/24 dev eth0 |
+| MASKA  |  | 255.255.255.0 |
 |   |  | |
 | PC 2  |  | |
-| IP - address  |  | |
-| MASKA  |  | |
+| IP - address  | 192.168.56.240 | ip addr add 192.168.56.240/24 dev eth0 |
+| MASKA  |  | 255.255.255.0 |
 
 Weryfikacja połączenia
 
-Polecenie
+Polecenie - PC 1
 ```
+ping 192.168.56.240
 ```
 
-Efekt
+Efekt - PC 1
 ```
+Nawiązano połączenie pomiędzy maszynami
+```
+
+Polecenie - PC 2
+```
+ping 192.168.56.120
+```
+
+Efekt - PC 2
+```
+Nawiązano połączenie pomiędzy maszynami
 ```
 
 ### Utrwalenie konfiguracji
 
 Dlaczego? Jak? Co? :)
+Konfiguracje muszą być utrwalane, aby po zatrzymaniu maszyn nie utracić połączenia. Służy do tego odpowiedni plik konfiguracyjny.
 
 ### Warto wiedzieć
 
